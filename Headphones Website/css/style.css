@@ -1,0 +1,92 @@
+body {
+	display: inline-flex;
+	flex-wrap: wrap;
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	padding-top: 50px;
+}
+
+#navbar {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 4em;
+	font-size: 120%;
+	margin: auto;
+	padding: 0;
+	background-color: #6f6e6f;
+	border-radius: 2px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+#companyLogo {
+	width: 6%;
+}
+
+#companyLogo img {
+	width: 58px;
+	height:auto;
+}
+
+#nav-link-1{
+	width: 66%;
+	text-align: left;
+	color: white;
+	text-transform: uppercase;
+}
+
+.nav-link {
+	width: 5%;
+	padding-right: 15px;
+}
+
+.nav-link a, #companyLogo a, #nav-link-1 a{
+	text-decoration: none;
+	color: white;
+}
+
+h1, h2 {
+	width: 100%;
+}
+
+#container {
+	margin-top: 3em;
+	border: 1px solid black;
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	height: auto;
+	align-items: center;
+	justify-content: space-around;
+
+}
+
+.half-screen {
+	width:50%;
+}
+
+.half-screen li {
+	list-style-type: none;
+}
+
+#hero-image {
+	width:70%;
+	height: auto;
+}
+
+#steps {
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	justify-content: space-between;
+}
+
+#steps div {
+	width:32%;
+}
