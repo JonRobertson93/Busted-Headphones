@@ -56,7 +56,6 @@ h1, h2 {
 
 #container {
 	margin-top: 3em;
-	border: 1px solid black;
 	padding: 10px;
 	display: flex;
 	flex-wrap: wrap;
@@ -65,6 +64,11 @@ h1, h2 {
 	align-items: center;
 	justify-content: space-around;
 
+}
+
+hr {
+	width: 100%;
+	margin: 2em 0 2em 0;
 }
 
 .half-screen {
@@ -76,7 +80,7 @@ h1, h2 {
 }
 
 #hero-image {
-	width:70%;
+	width:90%;
 	height: auto;
 }
 
@@ -89,4 +93,17 @@ h1, h2 {
 
 #steps div {
 	width:32%;
+}
+
+#steps p {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+#start-now {
+	-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
 }
