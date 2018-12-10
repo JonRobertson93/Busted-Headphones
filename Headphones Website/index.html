@@ -68,8 +68,8 @@
 
 	<div id="submission">
 		<h2> Sell Now: </h2>
-		<form action="" method="post">
-			<label for="brands"> Brand: </label>
+		<form id="submission-form" action="" method="post">
+			<label class="label" for="brands"> Brand: </label>
 			<select id="brands">
 				<option></option>
 				<option value="Bose">Bose</option>
@@ -78,15 +78,22 @@
 				<option value="JBL">JBL</option>
 			</select>
 
-			<label for="models"> Model: </label>
+			<label class="label" for="models"> Model: </label>
 			<select id="models">
 			</select>
 
-			<label for="qty"> Quantity: </label>
+			<label class="label" for="qty"> Quantity: </label>
 			<input name="qty" type="text" id="qty">
-			<button type="button" id="quoteButton">Submit</button>
+			<br />
+			<button type="button" id="addMore"> Add more items</button>
+			<span> OR </span>
+			<button type="button" id="quoteButton">Get Quote</button>
 		</form>
+		<div id = "quote">
+
+		</div>
 	</div>
+
 <script src="js/app.js"></script>
 </body>
 </html>
