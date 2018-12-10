@@ -159,3 +159,19 @@ h1, h2 {
 .steps-heading {
 
 }
+
+#submission-form {
+	width: 100%;
+}
+
+#submission-form > * {
+	margin: 0.3em;
+}
+
+.label {
+	font-weight: bold;
+}
+
+#quote {
+	width: 100%;
+}
