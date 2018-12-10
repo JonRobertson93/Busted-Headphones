@@ -1,9 +1,28 @@
 // Model: If option 'Bose' selected create all Bose models as option values
 const brands = document.getElementById("brands");
-let models = document.getElementById("models");
+const models = document.getElementById("models");
+const qty = document.getElementById('qty');
+const quoteButton = document.getElementById('quoteButton');
 let brandModels = {};
 brandModels['Bose'] = ['QC25', 'QC35'];
 brandModels['Beats by Dre'] = ['Solo3', 'Studio2', 'Studio3'];
+
+let firstTotalPrice;
+
+// Storing form data - doing calculations
+class Headphones {
+	constructor(model, price) {
+		this.model = model;
+		this.price = price;
+	}
+}
+
+const Solo2 = new Headphones("Solo2", 10);
+const Solo3 = new Headphones("Solo3", 15);
+const Studio2 = new Headphones("Studio2", 25);
+const Studio3 = new Headphones("Studio3", 35);
+
+const allHeadphones = [Solo2, Solo3, Studio2, Studio3];
 
 let selectedBrand;
 
@@ -20,10 +39,22 @@ function addModels() {
 }
 
 function deleteModels() {
-	for (i = 0; i < models.length; i++) {
-		models.remove();
-	}
+	models.innerHTML = "";
 }
+
+quoteButton.addEventListener('click', function() {
+	let selectModel = models.options[models.selectedIndex].innerHTML;
+	for (let i = 0; i < allHeadphones.length; i++) {
+		if (selectModel == allHeadphones[i].model) {
+			firstTotalPrice = allHeadphones[i].price;
+			console.log(firstTotalPrice);
+		}
+	}
+	firstTotalPrice *= qty.value;
+	console.log(`We can offer ${firstTotalPrice} for your ${qty.value} ${selectModel} headphones.`);
+});
+
+
 
 
 
