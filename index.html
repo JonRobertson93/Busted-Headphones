@@ -70,7 +70,7 @@
 		<h2> Sell Now: </h2>
 		<form id="submission-form" action="cart.php" method="POST">
 			<label class="label" for="brands"> Brand: </label>
-			<select id="brands" name="brand">
+			<select class="brands" name="brand[]">
 				<option></option>
 				<option value="Bose">Bose</option>
 				<option value="Beats by Dre">Beats by Dre</option>
@@ -79,11 +79,11 @@
 			</select>
 
 			<label class="label" for="models"> Model: </label>
-			<select id="models" name="model">
+			<select class="models" name="model[]">
 			</select>
 
 			<label class="label" for="qty"> Quantity: </label>
-			<input name="qty" type="text" id="qty" name="qty">
+			<input name="qty" type="text" class="qty" name="qty[]">
 			<br />
 			<button type="button" id="addMore"> Add more items</button>
 			<span> OR </span>
