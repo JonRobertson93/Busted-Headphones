@@ -12,9 +12,9 @@ let rowCount = 0;
 
 // Headphones RAW data
 let brandModels = {};
-brandModels['Bose'] = ['QC25', 'QC35'];
-brandModels['Beats by Dre'] = ['Solo2', 'Solo3', 'Studio2', 'Studio3'];
-brandModels['Sony'] = ['MDR-1000X', 'MDR-950BT', 'MDR-950B1', 'WH-1000XM2', 'WH-1000XM3'];
+brandModels['Bose'] = ['QuietComfort 25 Wired', 'QuietComfort 25 Wireless' 'QuietComfort 35 Series I', 'QuietComfort 35 Series II', 'BT2R'];
+brandModels['Beats by Dre'] = ['Solo2 Wired', 'Solo2 Wireless', 'Solo3 Wireless', 'Studio Wired', 'Studio Wireless', 'Studio2 Wired', 'Studio2 Wireless', 'Studio3 Wired', 'Studio3 Wireless'];
+brandModels['Sony'] = ['MDR-1000X', 'MDR-XB950BT', 'MDR-XB950B1', 'MDR-1000X', 'WH-1000XM2', 'WH-1000XM3'];
 brandModels['JBL'] = ['Everest 700 Elite'];
 
 let firstTotalPrice;
