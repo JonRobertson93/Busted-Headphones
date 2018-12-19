@@ -12,8 +12,8 @@ let rowCount = 0;
 
 // Headphones RAW data
 let brandModels = {};
-brandModels['Bose'] = ['QuietComfort 25 Wired', 'QuietComfort 25 Wireless' 'QuietComfort 35 Series I', 'QuietComfort 35 Series II', 'BT2R'];
-brandModels['Beats by Dre'] = ['Solo2 Wired', 'Solo2 Wireless', 'Solo3 Wireless', 'Studio Wired', 'Studio Wireless', 'Studio2 Wired', 'Studio2 Wireless', 'Studio3 Wired', 'Studio3 Wireless'];
+brandModels['Bose'] = ['QuietComfort 25 Wired', 'QuietComfort 25 Wireless', 'QuietComfort 35 Series I', 'QuietComfort 35 Series II', 'BT2R'];
+brandModels['Beats'] = ['Solo2 Wired', 'Solo2 Wireless', 'Solo3 Wireless', 'Studio Wired', 'Studio Wireless', 'Studio2 Wired', 'Studio2 Wireless', 'Studio3 Wireless'];
 brandModels['Sony'] = ['MDR-1000X', 'MDR-XB950BT', 'MDR-XB950B1', 'MDR-1000X', 'WH-1000XM2', 'WH-1000XM3'];
 brandModels['JBL'] = ['Everest 700 Elite'];
 
@@ -36,18 +36,6 @@ class CartItem {
 }
 
 let allCartItems = [];
-
-
-// More headphones data - tuples basically
-const QC25 = new Headphones("QC25", 20);
-const QC35 = new Headphones("QC35", 40);
-const Solo2 = new Headphones("Solo2", 10);
-const Solo3 = new Headphones("Solo3", 15);
-const Studio2 = new Headphones("Studio2", 25);
-const Studio3 = new Headphones("Studio3", 35);
-const MDRX = new Headphones("MDR-1000X", 15); 
-
-const allHeadphones = [Solo2, Solo3, Studio2, Studio3, QC25, QC35, MDRX];
 
 let selectedBrand;
 let selectModel;
@@ -83,7 +71,7 @@ function addMore() {
 			<select class="brands" name="brand[]">
 				<option></option>
 				<option value="Bose">Bose</option>
-				<option value="Beats by Dre">Beats by Dre</option>
+				<option value="Beats">Beats</option>
 				<option value="Sony">Sony</option>
 				<option value="JBL">JBL</option>
 			</select>
@@ -93,7 +81,7 @@ function addMore() {
 			</select>
 
 			<label class="label" for="qty"> Quantity: </label>
-			<input name="qty" type="text" class="qty" name="qty[]">
+			<input type="text" class="qty" name="qty[]">
 			<br />`);
 	brands = document.getElementsByClassName("brands");
 	models = document.getElementsByClassName("models");

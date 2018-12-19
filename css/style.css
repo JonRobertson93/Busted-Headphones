@@ -175,3 +175,43 @@ h1, h2 {
 #quote {
 	width: 100%;
 }
+
+.greenQuote {
+	color: #007500;
+}
+
+/*Quote table styling*/
+#quoteTable {
+	border-collapse: collapse;
+	width: 80%;
+}
+
+#quoteTable td, #quoteTable th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#quoteTable tr:nth-child(even) {
+	background-color: #ddd;
+}
+
+#quoteTable th {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	background-color: #75b060;
+}
+
+input {
+	border: 1px solid #3f3f3fe6;
+    margin-left: 5px;
+    padding: 2px
+}
+
+#orderInfo {
+    margin-top: 40px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
