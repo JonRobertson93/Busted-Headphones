@@ -181,21 +181,21 @@ h1, h2 {
 }
 
 /*Quote table styling*/
-#quoteTable {
+.formattedTable {
 	border-collapse: collapse;
 	width: 80%;
 }
 
-#quoteTable td, #quoteTable th {
+.formattedTable td, #quoteTable th {
 	border: 1px solid #ddd;
 	padding: 8px;
 }
 
-#quoteTable tr:nth-child(even) {
+.formattedTable tr:nth-child(even) {
 	background-color: #ddd;
 }
 
-#quoteTable th {
+.formattedTable th {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	text-align: left;
@@ -214,4 +214,15 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+#confirmation {
+	margin-top: 40px;
+	width: 80%;
+
+}
+
+#highlight {
+	line-height: 1.5;
+	background-color: yellow;
 }

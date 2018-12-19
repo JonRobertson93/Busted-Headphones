@@ -8,6 +8,13 @@ const quoteButton = document.getElementById('quoteButton');
 let quoted = document.getElementById('quote');
 const addMoreButton = document.getElementById('addMore');
 let rowCount = 0;
+let rows = {};
+rows['zero'] = 0;
+rows['one'] = 1;
+rows['two'] = 2;
+rows['three'] = 3;
+rows['four'] = 4;
+rows['five'] = 5;
 
 
 // Headphones RAW data
@@ -20,25 +27,11 @@ brandModels['JBL'] = ['Everest 700 Elite'];
 let firstTotalPrice;
 let modelCounter = 0;
 
-// Storing form data - doing calculations
-class Headphones {
-	constructor(model, price) {
-		this.model = model;
-		this.price = price;
-	}
-}
-
-class CartItem {
-	constructor(model, quantity) {
-		this.model = model;
-		this.quantity = quantity;
-	}
-}
-
 let allCartItems = [];
 
 let selectedBrand;
 let selectModel;
+let currentModels;
 
 Array.from(brands).forEach(function(brand) {
       brand.addEventListener('change', addModels);
@@ -48,48 +41,61 @@ addMoreButton.addEventListener('click', addMore);
 
 //TODO - Move functions down here
 function addModels(e) {
-	deleteModels();
+	//testing which item is selected
+	e.target.style.color = "purple";
+	//deleteModels();
 	selectedBrand = e.target.options[e.target.selectedIndex].value;
-	let current = brandModels[selectedBrand];
+	currentModels = brandModels[selectedBrand];
+	Array.from(currentModels).forEach(function(model) {
+		model.innerHMTL = "";
+	});
+	
+	// Array of all models of selectedBrand
 	//add correct brand's models to current models select box:
 	models[rowCount].options.add(new Option());	// Adds one blank option at top
-	for (i = 0; i < current.length; i ++) {
-		models[rowCount].options.add(new Option(current[i]));
+	for (let i = 0; i < currentModels.length; i ++) {
+		models[rowCount].options.add(new Option(currentModels[i]));
 	}
-	rowCount++;
 };
 
 function deleteModels(e) {
 	Array.from(models).forEach(function(model) {
-		models.innerHTML = "";
+		model.innerHTML = "";
 	});
 }
 
 
 function addMore() {
-	addMoreButton.insertAdjacentHTML('beforebegin', `<label class="label" for="brands"> Brand: </label>
-			<select class="brands" name="brand[]">
-				<option></option>
-				<option value="Bose">Bose</option>
-				<option value="Beats">Beats</option>
-				<option value="Sony">Sony</option>
-				<option value="JBL">JBL</option>
-			</select>
+	// Allows up to 10 rows
+	if (rowCount < 9) {
+		addMoreButton.insertAdjacentHTML('beforebegin', `<label class="label" for="brands"> Brand: </label>
+				<select class="brands" name="brand[]">
+					<option></option>
+					<option value="Bose">Bose</option>
+					<option value="Beats">Beats</option>
+					<option value="Sony">Sony</option>
+					<option value="JBL">JBL</option>
+				</select>
 
-			<label class="label" for="models"> Model: </label>
-			<select class="models" name="model[]">
-			</select>
+				<label class="label" for="models"> Model: </label>
+				<select class="models" name="model[]">
+				</select>
 
-			<label class="label" for="qty"> Quantity: </label>
-			<input type="text" class="qty" name="qty[]">
-			<br />`);
-	brands = document.getElementsByClassName("brands");
-	models = document.getElementsByClassName("models");
-	qty = document.getElementsByClassName('qty');
+				<label class="label" for="qty"> Quantity: </label>
+				<input type="text" class="qty" name="qty[]">
+				<br />`);
+		brands = document.getElementsByClassName("brands");
+		models = document.getElementsByClassName("models");
+		qty = document.getElementsByClassName('qty');
+		rowCount++;
 
-	Array.from(brands).forEach(function(brand) {
-      brand.addEventListener('change', addModels);
-    });
+		Array.from(brands).forEach(function(brand) {
+	      brand.addEventListener('change', addModels);
+	    });
+	} else {
+		oops = document.getElementById('oops');
+		oops.innerHTML = `<p> I'm sorry, but you've added the maximum number of items for one order! </p>`;
+	}
 
 }
 
