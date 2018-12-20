@@ -29,9 +29,12 @@ let modelCounter = 0;
 
 let allCartItems = [];
 
+let parentBrand;
 let selectedBrand;
+
 let selectModel;
 let currentModels;
+let working;
 
 Array.from(brands).forEach(function(brand) {
       brand.addEventListener('change', addModels);
@@ -41,48 +44,47 @@ addMoreButton.addEventListener('click', addMore);
 
 //TODO - Move functions down here
 function addModels(e) {
-	//testing which item is selected
-	e.target.style.color = "purple";
-	//deleteModels();
-	selectedBrand = e.target.options[e.target.selectedIndex].value;
+	parentBrand = e.target.options[e.target.selectedIndex];	//add .value in after ]
+	selectedBrand = parentBrand.value;
 	currentModels = brandModels[selectedBrand];
-	Array.from(currentModels).forEach(function(model) {
-		model.innerHMTL = "";
-	});
+	// Lines 51-52 to delete models next to changed brand
+	working = parentBrand.parentElement.parentElement.nextElementSibling.firstElementChild.nextElementSibling;
+	working.innerHTML = "";
 	
 	// Array of all models of selectedBrand
 	//add correct brand's models to current models select box:
-	models[rowCount].options.add(new Option());	// Adds one blank option at top
+	working.options.add(new Option());	// Adds one blank option at top
 	for (let i = 0; i < currentModels.length; i ++) {
-		models[rowCount].options.add(new Option(currentModels[i]));
+		working.options.add(new Option(currentModels[i]));
 	}
 };
-
-function deleteModels(e) {
-	Array.from(models).forEach(function(model) {
-		model.innerHTML = "";
-	});
-}
-
 
 function addMore() {
 	// Allows up to 10 rows
 	if (rowCount < 9) {
-		addMoreButton.insertAdjacentHTML('beforebegin', `<label class="label" for="brands"> Brand: </label>
-				<select class="brands" name="brand[]">
-					<option></option>
-					<option value="Bose">Bose</option>
-					<option value="Beats">Beats</option>
-					<option value="Sony">Sony</option>
-					<option value="JBL">JBL</option>
-				</select>
+		addMoreButton.insertAdjacentHTML('beforebegin',
+				`<div class="formDivs">
+					<label class="label" for="brands"> Brand: </label>
+					<select class="brands" name="brand[]">
+						<option></option>
+						<option value="Bose">Bose</option>
+						<option value="Beats">Beats</option>
+						<option value="Sony">Sony</option>
+						<option value="JBL">JBL</option>
+					</select>
+				</div>
 
-				<label class="label" for="models"> Model: </label>
-				<select class="models" name="model[]">
-				</select>
+				<div class="formDivs">
+					<label class="label" for="models"> Model: </label>
+					<select class="models" name="model[]">
+					</select>
+				</div>
 
-				<label class="label" for="qty"> Quantity: </label>
-				<input type="text" class="qty" name="qty[]">
+				<div class="formDivs">
+					<label class="label" for="qty"> Quantity: </label>
+					<input type="text" class="qty" name="qty[]">
+				</div>
+				<br />
 				<br />`);
 		brands = document.getElementsByClassName("brands");
 		models = document.getElementsByClassName("models");
@@ -98,6 +100,32 @@ function addMore() {
 	}
 
 }
+
+// JS for hamburger menu
+let hamburger = document.getElementById('icon');
+hamburger.addEventListener('click', function() {
+	let navMenu = document.getElementById('navbar');
+	let navItems = document.getElementsByClassName('nav-link');
+	let container = document.getElementById('container');
+	if (navMenu.className == 'smallNav') {
+		navMenu.classList.remove('smallNav');
+	} else {
+		navMenu.classList.add("smallNav");
+	}
+	Array.from(navItems).forEach(function(item){
+		if (item.classList.contains('smallNavLink')) {
+			item.classList.remove('smallNavLink');
+
+		} else {
+			item.classList.add('smallNavLink');
+		}
+	});
+	if (container.classList.contains('biggerContainer')) {
+		container.classList.remove('biggerContainer');
+	} else {
+		container.classList.add('biggerContainer');
+	}
+});
 
 // OLD ADDMORE() FUNCTION:
 	// selectModel = models.options[models.selectedIndex].innerHTML;

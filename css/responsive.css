@@ -1,0 +1,108 @@
+@media screen and (max-width: 650px) {
+	#navbar {
+		font-size: 90%;
+	}
+
+	.nav-link {
+		display: none;
+	}
+
+	#icon {
+		color: white;
+    	position: fixed;
+    	top: 23px;
+    	right: 17px;
+    	font-size: 109%;
+    	display: block;
+	}
+
+	#container {
+		height: auto;
+		align-items: center;
+		justify-content: center;
+	}
+	.half-screen {
+		order: 2;
+		width: 100%;
+	}
+
+	.half-screen h1 {
+		text-align: center;
+		font-size: 147%;
+	}
+
+	.half-screen ul {
+		text-align: left;
+		font-size: 115%;
+		padding-left: 0px;
+		width: 75%;
+		margin: auto;
+		margin-bottom: 2em;
+	}
+	#get-started {
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	#start-now {
+		padding-bottom: 16px;
+	}
+	#hero-image {
+		width: 65%;
+		height:auto;
+	}
+	.lead {
+		font-size: 150%;
+		text-align: center;
+	}
+
+	#steps div {
+		font-size: 105%;
+		width: 90%;
+		height: auto;
+	}
+
+	.steps-heading {
+		width: 100%;
+	}
+
+	.steps-div {
+		width: 100%;
+		height: auto;
+	}
+
+	.formDivs {
+		width: 80%;
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: left;
+    	padding: 0.5em;
+    	margin: auto;
+    	font-size: 112%;
+	}
+
+	.qty {
+		width: 20%;
+	}
+
+	select {
+		font-size: 80%;
+		padding: 3px 5px;
+	}
+
+	label {
+		padding-right: .5em;
+	}
+
+}
+
+@media screen and (min-width: 651px) and (max-width: 749px) {
+	#hero-image {
+		width: 47%;
+	}
+}
+
+@media screen and (min-width: 750px) and (max-width: 1050px) {
+	#hero-image {
+		width: 38%;
+	}
+}
