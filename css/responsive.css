@@ -93,6 +93,15 @@
 		padding-right: .5em;
 	}
 
+	.formattedTable {
+		width: 98%;
+		font-size: 85%;
+	}
+
+	.formattedTable tr:first-child {
+		font-size: 82%;
+	}
+
 }
 
 @media screen and (min-width: 651px) and (max-width: 749px) {
