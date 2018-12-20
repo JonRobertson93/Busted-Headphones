@@ -255,13 +255,22 @@ h1, h2 {
 }
 
 /*Quote table styling*/
+
+.tableDiv {
+	margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
 .formattedTable {
 	border-collapse: collapse;
 	width: 80%;
 }
 
 .formattedTable td, #quoteTable th {
-	border: 1px solid #ddd;
+	border: 1px solid #979595;
 	padding: 8px;
 }
 
@@ -272,8 +281,44 @@ h1, h2 {
 .formattedTable th {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	text-align: left;
-	background-color: #75b060;
+	text-align: center;
+	background-color: #007500;
+}
+
+.acceptDeclineDiv {
+	width: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+
+.tableLinks {
+    margin-top: 1em;
+    text-decoration: none;
+    padding: 5px 8px;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    -webkit-appearance: button;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    margin-left: 2em;
+    font-size: 89%;
 }
 
 input {
