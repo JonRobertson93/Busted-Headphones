@@ -2,8 +2,10 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title> Sell Junk Headphones </title>
 	<link href="CSS/style.css" rel="stylesheet">
+	<link href="CSS/responsive.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
@@ -15,6 +17,7 @@
 		<div class="nav-link"> <a href="http://brokenheadphones.store/"> Home </a> </div>
 		<div class="nav-link"> <a href="#"> FAQs </a> </div>
 		<div class="nav-link"> <a href="#"> Contact </a> </div>
+		<a href="javascript:void(0);" id="icon"> <i class="fas fa-bars"></i></a>
 	</div>
 	<!-- Main body content -->
 	<!-- Reference - https://www.gadgetsalvation.com/ -->
@@ -67,27 +70,35 @@
 
 
 	<div id="submission">
-		<h2> Sell Now: </h2>
 		<form id="submission-form" action="cart.php" method="POST">
-			<label class="label" for="brands"> Brand: </label>
-			<select class="brands" name="brand[]">
-				<option></option>
-				<option value="Bose">Bose</option>
-				<option value="Beats">Beats</option>
-				<option value="Sony">Sony</option>
-				<option value="JBL">JBL</option>
-			</select>
+			<h2> Sell Now: </h2>
+			<div class="formDivs">
+				<label class="label" for="brands"> Brand: </label>
+				<select class="brands" name="brand[]">
+					<option></option>
+					<option value="Bose">Bose</option>
+					<option value="Beats">Beats</option>
+					<option value="Sony">Sony</option>
+					<option value="JBL">JBL</option>
+				</select>
+			</div>
 
-			<label class="label" for="models"> Model: </label>
-			<select class="models" name="model[]">
-			</select>
+			<div class="formDivs">
+				<label class="label" for="models"> Model: </label>
+				<select class="models" name="model[]">
+				</select>
+			</div>
 
-			<label class="label" for="qty"> Quantity: </label>
-			<input type="text" class="qty" name="qty[]">
+			<div class="formDivs">
+				<label class="label" for="qty"> Quantity: </label>
+				<input type="text" class="qty" name="qty[]">
+			</div>
 			<br />
-			<button type="button" id="addMore"> Add more items</button>
-			<span> OR </span>
-			<input type="submit" id="quoteButton" value="Get Quote">
+			<br />
+			<div class="formButtons">
+				<button type="button" id="addMore"> Add more items</button>
+				<input type="submit" id="quoteButton" value="Get Quote">
+			</div>
 			<p id = "oops">
 
 			</p>
