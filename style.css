@@ -1,0 +1,463 @@
+body {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	padding-top: 50px;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+#navbar {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: left;
+	align-items: center;
+	height: 3.5em;
+	font-size: 120%;
+	margin: auto;
+	padding: 8px;
+	padding-left: 1.5em;
+	background-color: #000000;
+	border-radius: 2px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-transform: uppercase;
+	border-bottom: 1px solid white;
+}
+
+#nav-link-1 {
+	width: 73%;
+	text-align: left;
+	color: white;
+	text-transform: uppercase;
+}
+
+#nav-link-1 i {
+	padding: 10px;
+	font-size: 180%;
+}
+
+.nav-link {
+	width: 7%;
+	margin-right: 1em;
+}
+
+/*#contactLink {
+	margin-right: 2em;
+}*/
+
+.nav-link a, #companyLogo a, #nav-link-1 a{
+	text-decoration: none;
+	color: white;
+}
+
+.nav-link a:hover, #companyLogo a:hover, #nav-link-1 a:hover, #icon i:hover {
+	/*color: #b9b9b9;*/
+	font-weight: bold;
+    font-size: 110%;
+}
+
+#nav-link-1 i:hover {
+	/*color: #b9b9b9;*/
+	cursor: pointer;
+	font-weight: bold;
+    font-size: 220%;
+}
+
+/*Styling for hamburger menu*/
+
+#icon {
+		display: none;
+	}
+
+.smallNav {
+	text-align: right;
+	padding-right: 49px;
+	height: 12.5em!important;
+
+}
+
+.smallNavLink {
+	width: 99%!important;
+	display: inline-flex!important;
+	justify-content: flex-end;
+	padding-right: 2em;
+}
+
+.biggerContainer {
+	margin-top: 9em!important;
+}
+
+h1, h2 {
+	width: 100%;
+}
+
+#container {
+	margin-top: 2em;
+	padding: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	min-height: 500px;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+}
+
+#container ul {
+	margin-bottom: 3em;
+}
+
+.half-screen {
+	width:50%;
+}
+
+.half-screen li {
+	list-style-type: none;
+}
+
+.half-screen i {
+	padding-right: 3px;
+	font-size:150%;
+}
+
+#hero-image {
+	width: 28%;
+	height: auto;
+}
+
+#steps {
+	background: black;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	min-height: 500px;
+	padding: 15px;
+	justify-content: center;
+}
+
+#stepsInnerDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    width: 99%;
+}
+
+#step-one, #step-two, #step-three {
+	display: flex;
+	flex-wrap: wrap;
+	width: 27%;
+	padding: .5em;
+	margin: auto;
+	height: auto;
+	justify-content: center;
+}
+
+#steps p {
+}
+
+#start-now {
+	padding: 1em 1.5em 1em 1.5em;
+	margin: 75px;
+	background: black;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 8px;
+}
+
+.steps-divs {
+	border: 1px solid white;
+	border-radius: 10px;
+	padding: 1em;
+	min-height: 355px;
+}
+
+.instructions {
+	text-align: left;
+}
+
+.steps-divs i {
+	font-size: 467%;
+    padding-top: 0.2em;
+    text-align: center;
+}
+
+#start-now:hover {
+	/*color: #b9b9b9;*/
+	font-weight: bold;
+    font-size: 110%;
+}
+
+#submission {
+	min-height: 600px;
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.steps-heading {
+
+}
+
+#submission-form {
+	margin-top: 2em;
+	width: 100%;
+}
+
+.formDivs {
+	display: inline;
+	margin-right: 1.2em;
+}
+
+.qty {
+	width: 10%;
+}
+
+
+.label {
+	font-weight: bold;
+}
+
+/*Matching styling from Add More button*/
+#quoteButton {
+	align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+	-webkit-appearance: button;
+	text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    margin-left: 2em;
+    font: 400 13.3333px Arial;
+}
+
+#quoteButton: active {
+	border-style: inset;
+}
+
+#quote {
+	width: 100%;
+}
+
+.greenQuote {
+	color: #007500;
+}
+
+/*Quote table styling*/
+
+.tableDiv {
+	margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.formattedTable {
+	border-collapse: collapse;
+	width: 80%;
+}
+
+.formattedTable td, #quoteTable th {
+	border: 1px solid #979595;
+	padding: 8px;
+}
+
+.formattedTable tr:nth-child(even) {
+	background-color: #ddd;
+}
+
+.formattedTable th {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	background-color: #007500;
+}
+
+.acceptDeclineDiv {
+	width: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+
+.tableLinks {
+    margin-top: 1em;
+    text-decoration: none;
+    padding: 5px 8px;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    -webkit-appearance: button;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    margin-left: 2em;
+    font-size: 89%;
+}
+
+input {
+	border: 1px solid #3f3f3fe6;
+    padding: 2px
+}
+
+
+#orderInfo {
+	font-size: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	margin: auto;
+	margin-top: 3em;
+
+}
+
+#order-form {
+	width: auto;
+}
+
+#shippingDiv {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: left;
+}
+
+#order-form input {
+	margin-left: 0px;
+	margin-bottom: 0.8em;
+	padding: 4px 12px;
+}
+
+#confirmation {
+	margin: auto;
+	margin-top: 40px;
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#personalDetails {
+	width: 98%;
+	text-align: left;
+}
+
+#highlight {
+	line-height: 1.5;
+	background-color: yellow;
+}
+
+
+#confirmationTable {
+	border: 1px solid gray;
+	border-collapse: collapse;
+	width: 98%;
+	margin: auto;
+	margin-bottom: 2em;
+}
+
+#confirmationTable th, #confirmationTable td {
+	border: 1px solid gray;
+}
+
+hr {
+	display: flex;
+    flex-wrap: wrap;
+    height: 8px;
+    border: 0;
+    border-top: 1.3px solid #a7a7a7;
+    margin: auto;
+    margin-top: 3em;
+    padding: 0;
+    width: 89%;
+}
+
+.leftHeading {
+	text-align: left;
+}
+
+/*Contact Form */
+
+	.container {
+		width: 85%;
+	}
+
+	#contactForm input[type=text], #contactForm select, #contactForm textarea {
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	  margin-top: 6px;
+	  margin-bottom: 16px;
+	  resize: vertical;
+	}
+
+	#contactForm {
+		margin: auto;
+		text-align: left;
+	}
+
+	#contactSubmit {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 0.8em 1.6em;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  width: auto;
+	  font-size: 100%;
+	}
+
+	#contactSubmit:hover {
+	  background-color: #2c802f;
+	  font-size: 95%;
+	}
+
+	textarea {
+		min-height: 200px;
+		height: auto;
+	}
+	
+	#messageMessage {
+	    display: block;
+	    margin-bottom: 23em;
+	}

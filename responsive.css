@@ -1,0 +1,212 @@
+@media screen and (max-width: 399px) {
+	#confirmationTable {
+		font-size: 93%;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 649px) {
+	#confirmationTable {
+		font-size: 102%;
+	}
+	select {
+		min-width: 26%;
+		font-size: 80%;
+		padding: 3px 5px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#navbar {
+		font-size: 88%;
+	}
+
+	#nav-link-1 {
+		width: 94%;
+	}
+
+	.nav-link {
+		display: none;
+	}
+
+	#icon {
+		color: white;
+    	position: fixed;
+    	top: 22px;
+    	right: 17px;
+    	font-size: 130%;
+    	display: block;
+	}
+
+	#container {
+		height: auto;
+		align-items: center;
+		justify-content: center;
+	}
+	.half-screen {
+		order: 2;
+		width: 100%;
+	}
+
+	.half-screen h1 {
+		text-align: center;
+		font-size: 147%;
+	}
+
+	.half-screen ul {
+		text-align: left;
+		font-size: 115%;
+		padding-left: 0px;
+		width: 75%;
+		margin: auto;
+		margin-bottom: 2em;
+	}
+	#get-started {
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	#start-now {
+		padding-bottom: 16px;
+	}
+	#hero-image {
+		width: 65%;
+		height:auto;
+	}
+	.lead {
+		font-size: 150%;
+		text-align: center;
+	}
+
+	#steps div {
+		font-size: 105%;
+		width: 90%;
+		height: auto;
+	}
+	
+	#stepsInnerDiv {
+	    width: 80%;
+	}
+
+	.steps-heading {
+		width: 100%;
+	}
+
+	.steps-div {
+		width: 100%;
+		height: auto;
+	}
+
+	.formDivs {
+		width: 80%;
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	padding: 0.5em;
+    	margin: auto;
+    	font-size: 112%;
+	}
+
+	.qty {
+		width: 20%;
+	}
+
+	select {
+		min-width: 26%;
+		font-size: 80%;
+		padding: 3px 5px;
+	}
+
+	label {
+		padding-right: .5em;
+	}
+
+	.formattedTable {
+		width: 98%;
+	}
+
+	.formattedTable tr:first-child {
+		font-size: 82%;
+	}
+
+	#confirmation {
+		width: 86%;
+	}
+	.shiftUp {
+	    /*Work on later*/
+	}
+
+}
+
+@media screen and (min-width: 651px) and (max-width: 749px) {
+	#hero-image {
+		width: 47%;
+	}
+	#nav-link-1 {
+		width: 64%;
+	}
+	#confirmation {
+		width: 80%;
+	}
+	#confirmationTable {
+		font-size: 110%;
+	}
+}
+
+
+@media screen and (min-width: 750px) and (max-width: 850px) {
+	#nav-link-1 {
+		width: 67%;
+	}
+	#confirmation {
+		width: 72%;
+	}
+	#confirmationTable {
+		font-size: 110%;
+	}
+}
+
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+	#nav-link-1 {
+		width: 69%;
+	}
+	#confirmation {
+		width: 68%;
+	}
+}
+
+@media screen and (min-width: 750px) and (max-width: 1050px) {
+	#hero-image {
+		width: 38%;
+	}
+
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+	#nav-link-1 {
+		width: 71%;
+	}
+}
+
+/* contact form */
+@media screen and (min-width: 600px) {
+	.container {
+		width: 65%;
+	}
+}
+
+@media screen and (min-width: 651px) {
+	select {
+		min-width: 10%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.container {
+		width: 55%;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	.container {
+		width: 48%;
+	}
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title> Sell Junk Headphones </title>
+	<link href="style.css" rel="stylesheet">
+	<link href="responsive.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<div id="navbar">
+		<div id="nav-link-1">
+			<span> <i class="fas fa-headphones-alt"></i> <a href="http://brokenheadphones.store/"> Busted Headphones</a> </span>
+		</div>
+		<div class="nav-link"> <a href="http://brokenheadphones.store/"> Home </a> </div>
+		<div class="nav-link"> <a href="#"> FAQs </a> </div>
+		<div class="nav-link" id="contactLink"> <a href="http://brokenheadphones.store/contact.html"> Contact </a> </div>
+		<a href="javascript:void(0);" id="icon"> <i class="fas fa-bars"></i></a>
+	</div>
+	<!-- Main body content -->
+	<div id="container">
+		<div class="half-screen">
+			<h1> Turn your broken, used or unwanted headphones in cash! </h1> 
+			<ul>
+				<li> <i class="fas fa-check"></i> Instant online quote </li>
+				<li> <i class="fas fa-check"></i> FREE shipping label </li>
+				<li> <i class="fas fa-check"></i> Secure payment within 24 hours </li>
+			</ul>
+			<div id="get-started">
+			<a href="#submission" id="start-now"> Get Quote </a>
+			</div>
+		</div>
+		<!-- <div class="half-screen"> -->
+			<img id="hero-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Headphone_icon.svg/2000px-Headphone_icon.svg.png" alt="placeholder">
+		<!-- </div> -->
+	</div>
+
+
+	<div id="steps">
+	    <div id="stepsInnerDiv">
+    		<div id="step-one">
+    			<h3 class="steps-heading"> Instant Quote </h3>
+    			<div class="steps-divs">
+    				<p class = "instructions"> Use the tool below to get an instant price quote for your headphones. You can enter as many headphones as you want to sell. When you are ready for your quote, click "Get Quote".
+    				</p>
+    				<i class="fas fa-hand-holding-usd"></i>
+    			</div>
+    		</div>
+    		<div id="step-two">
+    			<h3 class="steps-heading"> Ship </h3>
+    			<div class="steps-divs">
+    				<p class = "instructions"> 
+    					Once you accept your quote, you will receive a confirmation email with your free shipping label within 24 hours. 
+    					All you will need is a printer to print the label and a box or envelope to pack the headphones in. 
+    				</p>
+    				<i class="fas fa-truck"></i>
+    			</div>
+    		</div>
+    		<div id="step-three">
+    			<h3 class="steps-heading"> Get Paid </h3>
+    			<div class="steps-divs">
+    				<p class = "instructions"> Within 24 hours of receiving your package, a payment will be sent via PayPal for your quoted amount. 
+    				</p>
+    				<i class="fab fa-cc-paypal"></i>
+    			</div>
+    		</div>
+    	</div>
+	</div>  
+
+
+	<div id="submission">
+		<form id="submission-form" action="cart.php" method="POST">
+			<h2> Sell Now: </h2>
+			<div class="formDivs">
+				<label class="label" for="brands"> Brand: </label>
+				<select class="brands" name="brand[]">
+					<option></option>
+					<option value="Bose">Bose</option>
+					<option value="Beats">Beats</option>
+					<option value="Sony">Sony</option>
+					<option value="JBL">JBL</option>
+				</select>
+			</div>
+
+			<div class="formDivs">
+				<label class="label" for="models"> Model: </label>
+				<select class="models" name="model[]">
+				</select>
+			</div>
+
+			<div class="formDivs">
+				<label class="label" for="qty"> Quantity: </label>
+				<input type="text" class="qty" name="qty[]">
+			</div>
+			<br />
+			<br />
+			<div class="formButtons">
+				<button type="button" id="addMore"> Add more items</button>
+				<input type="submit" id="quoteButton" value="Get Quote">
+			</div>
+			<p id = "oops">
+
+			</p>
+		</form>
+		
+	</div>
+
+<script src="app.js"></script>
+</body>
+</html>
