@@ -1,33 +1,4 @@
-@media screen and (max-width: 399px) {
-	#confirmationTable {
-		font-size: 93%;
-	}
-}
-
-@media screen and (min-width: 400px) and (max-width: 649px) {
-	#confirmationTable {
-		font-size: 102%;
-	}
-	select {
-		min-width: 26%;
-		font-size: 80%;
-		padding: 3px 5px;
-	}
-}
-
 @media screen and (max-width: 650px) {
-	#navbar {
-		font-size: 88%;
-	}
-
-	#nav-link-1 {
-		width: 94%;
-	}
-
-	.nav-link {
-		display: none;
-	}
-
 	#icon {
 		color: white;
     	position: fixed;
@@ -106,11 +77,11 @@
 	}
 
 	.qty {
-		width: 20%;
+		width: 52%;
 	}
 
 	select {
-		min-width: 26%;
+		min-width: 60%;
 		font-size: 80%;
 		padding: 3px 5px;
 	}
@@ -130,18 +101,27 @@
 	#confirmation {
 		width: 86%;
 	}
-	.shiftUp {
-	    /*Work on later*/
-	}
-
 }
+
+@media screen and (min-width: 400px) and (max-width: 649px) {
+	#confirmationTable {
+		font-size: 102%;
+	}
+}
+
+@media screen and (max-width: 399px) {
+	#confirmationTable {
+		font-size: 93%;
+	}
+	.qty {
+		width: 49%;
+	}
+}
+
 
 @media screen and (min-width: 651px) and (max-width: 749px) {
 	#hero-image {
 		width: 47%;
-	}
-	#nav-link-1 {
-		width: 64%;
 	}
 	#confirmation {
 		width: 80%;
@@ -153,9 +133,6 @@
 
 
 @media screen and (min-width: 750px) and (max-width: 850px) {
-	#nav-link-1 {
-		width: 67%;
-	}
 	#confirmation {
 		width: 72%;
 	}
@@ -165,9 +142,6 @@
 }
 
 @media screen and (min-width: 851px) and (max-width: 1000px) {
-	#nav-link-1 {
-		width: 69%;
-	}
 	#confirmation {
 		width: 68%;
 	}
@@ -180,11 +154,6 @@
 
 }
 
-@media screen and (min-width: 1001px) and (max-width: 1200px) {
-	#nav-link-1 {
-		width: 71%;
-	}
-}
 
 /* contact form */
 @media screen and (min-width: 600px) {

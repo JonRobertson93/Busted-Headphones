@@ -5,15 +5,17 @@ if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) |
   exit();
 }
 
+
+
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
 // Create the email and send the message
-$to = "<email here>"; // Where the email will send to
+$to = "headphonecenter@outlook.com";
 $subject = "Message regarding headphones";
 $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nMessage:\n$message";
-$header = "From: <from email>\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$header = "From: headphonecenter@outlook.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $header .= "Reply-To: $email";	
 
 if (!mail($to, $subject, $body, $header)) {
@@ -30,20 +32,31 @@ if (!mail($to, $subject, $body, $header)) {
 	<title> Sell Junk Headphones </title>
 	<link href="style.css" rel="stylesheet">
 	<link href="responsive.css" rel="stylesheet">
+	<link href="../navbar.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
-	<div id="navbar">
-		<div id="nav-link-1">
-			<span> <i class="fas fa-headphones-alt"></i> <a href="http://brokenheadphones.store/"> Busted Headphones</a> </span>
-		</div>
-		<div class="nav-link"> <a href="http://brokenheadphones.store/"> Home </a> </div>
-		<div class="nav-link"> <a href="#"> FAQs </a> </div>
-		<div class="nav-link"> <a href="http://brokenheadphones.store/contact.html"> Contact </a> </div>
-		<a href="javascript:void(0);" id="icon"> <i class="fas fa-bars"></i></a>
-	</div>
+	<!-- NAVBAR - FIRST COMPONENT IN BODY -->
+<nav id="navbar">
+    <h1> Broken Headphones </h1>
+        <a href="../" id="home"> Home </a>
+        <p id="projects"> Projects <i id="downArrow" class="fa fa-caret-down"></i></p>
+        <ul class="dropdown">
+            <li> Animal Clicker </li>
+            <li> Art Portfolio </li>
+            <li> Broken Headphones </li>
+            <li> Concentration Game </li>
+            <li> eBay Calculator </li>
+            <li> Frogger Game </li>
+            <li> HTML Email Blast Ad </li>
+            <li> Responsive News Site </li>
+            <li> Restroom Rater </li>
+            <li> Sample Portfolio Page </li>
+        </ul>
+    </nav>
 	<!-- Main body content -->
+	<!-- Reference - https://www.gadgetsalvation.com/ -->
 	<div id="container">
 	    <div id="messageMessage">
             <p> <b> Thank you for your message.</b></p>
