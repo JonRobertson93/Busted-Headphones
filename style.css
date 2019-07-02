@@ -1,383 +1,609 @@
-body {
-	margin: auto;
-	justify-content: center;
-	text-align: center;
-	width: 100%;
-	font-family: 'Noto Sans TC', sans-serif;
+body, textarea {
+  font-family: 'Cabin', sans-serif;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: #ffbc00;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
 }
 
 #container {
-	margin-top: 2em;
-	padding: 30px;
-	display: flex;
-	flex-wrap: wrap;
-	height: auto;
-	min-height: 500px;
-	align-items: center;
-	justify-content: center;
-	text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
 }
 
-#container ul {
-	margin-bottom: 3em;
+/* NAVBAR CONTENTS */
+
+#navbar {
+  box-shadow: 1px 0 4px 1px #b5b5b5;  /* maybe not...??? */
+  border-bottom: 1px solid #d3cece;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  padding: 0.5em;
 }
 
-.half-screen {
-	width:50%;
+
+.heading {
+  text-align: left;
+  text-indent: 1.3vw;
 }
 
-.half-screen li {
-	list-style-type: none;
+/* Icon with Title*/
+
+.fa-star {
+  color: #a5a4a4;
+  font-weight: 900;
+  width: 0;
+  margin-right: 1em;
+  font-size: 140%!important;
 }
 
-.half-screen i {
-	padding-right: 3px;
-	font-size:150%;
+.selectedStar {
+  color: #ffbc00;
 }
 
-#hero-image {
-	width: 28%;
-	height: auto;
+#siteTitle {
+    width: 65%;
+  color: inherit;
+  text-align: left;
+  padding-left: 1em;
+  margin: 0.3em 0;
 }
 
-#steps {
-	background: black;
-	color: white;
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	height: auto;
-	min-height: 500px;
-	justify-content: center;
+#siteTitle a:hover {
+  font-size: 102%;
 }
 
-#stepsInnerDiv {
+#siteTitle a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#siteTitle .fa-star {
+  font-size: 120%!important;
+  color: #ffbc00!important;
+}
+
+.golden {
+  color: #ffbc00;
+}
+
+.signIn {
+  padding-right: 1em;
+}
+
+.signIn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.signIn:hover {
+  cursor: pointer;
+  font-size: 110%;
+}
+
+/* HERO/BANNER*/
+
+#allHero {
+    margin-left: 59vw;
+    padding-right: 2%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    height: auto;
-    width: 99%;
+    justify-content:  center;
 }
 
-#step-one, #step-two, #step-three {
-	display: flex;
-	flex-wrap: wrap;
-	width: 27%;
-	padding: .5em;
-	margin: auto;
-	height: auto;
-	justify-content: center;
-}
-
-#steps p {
-}
-
-#start-now {
-	padding: 1em 1.5em 1em 1.5em;
-	margin: 75px;
-	background: black;
-	color: white;
-	text-transform: uppercase;
-	text-decoration: none;
-	border-radius: 8px;
-}
-
-.steps-divs {
-	border-top: 1px solid white;
-	padding: 1em;
-	min-height: 355px;
-}
-
-.instructions {
-	text-align: left;
-}
-
-.steps-divs i {
-	font-size: 467%;
-    padding-top: 0.2em;
-    text-align: center;
-}
-
-#start-now:hover {
-	/*color: #b9b9b9;*/
-	font-weight: bold;
-    font-size: 110%;
-}
-
-#submission {
-	min-height: 600px;
-	height: auto;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-#submission-form {
-	margin-top: 2em;
-	width: 100%;
-}
-
-.formDivs {
-	display: inline;
-	margin-right: 1.2em;
-}
-
-.qty {
-	width: 10%;
-}
-
-.models {
-    width: 15%;
-}
-.label {
-	font-weight: bold;
-}
-
-/*Matching styling from Add More button*/
-#quoteButton {
-	align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    color: buttontext;
-    background-color: buttonface;
-    box-sizing: border-box;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-image: initial;
-	-webkit-appearance: button;
-	text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    margin-left: 2em;
-    font: 400 13.3333px Arial;
-}
-
-#quoteButton: active {
-	border-style: inset;
-}
-
-#quote {
-	width: 100%;
-}
-
-.greenQuote {
-	color: #007500;
-}
-
-/*Quote table styling*/
-
-.tableDiv {
-	margin: auto;
+#heroImage {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+    align-items: center;    /* for text and search bar*/
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 4em;
+    background-image: url("http://www.organizedmom.net/wp-content/uploads/2017/09/toilet20bowl20and20bathroomcleaner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-.formattedTable {
-	border-collapse: collapse;
-	width: 80%;
+#heroText {
+  font-size: 3.2vw;
 }
 
-.formattedTable td, #quoteTable th {
-	border: 1px solid #979595;
-	padding: 8px;
+
+#heroImage img {
+  width: 100%;
+  margin-top: -8em;
 }
 
-.formattedTable tr:nth-child(even) {
-	background-color: #ddd;
+
+#searchDiv {
+    width: 100%;
 }
 
-.formattedTable th {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	text-align: center;
-	background-color: #007500;
+/*SEARCH BAR*/
+
+.tt-query {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 }
 
-.acceptDeclineDiv {
-	width: 50%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.typeahead {
+  background-color: #FFFFFF;
+}
+
+.typeahead:focus {
+  background: gray;
+}
+
+.typeahead, .tt-query, .tt-hint {
+  //border: 1px solid black;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 8px 40px 8px 9px;
+}
+
+.boldHover {
+  font-weight: bold!important;
+  font-size: 105%!important;
+  cursor: pointer;
+}
+
+.typeahead {
+  background-color: #FFFFFF;
+}
+
+
+
+.tt-dropdown-menu {
+    background: white;
+    border-radius: 8px;
+    width: 93.5%;
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    display: none;
+    margin: -2% auto auto;
+    padding-left: 1em;
     text-align: left;
 }
 
-.tableLinks {
-    margin-top: 1em;
+#searchSubmit {
+  border: none;
+  background: none;
+  margin-left:  -42px;
+  position: relative;
+  z-index: 1;
+  top: 16px;
+
+}
+
+
+#magButton {
+  font-size:  150%;
+  color: gray;
+}
+
+#magButton:hover {
+    color: black;
+}
+
+/*DIV*/
+#leaveReview {
+  width: 100%;
+  margin-top: 2em;
+}
+
+/*anchor tag*/
+#writeReview, 
+#submitButton {
+    color: black;
     text-decoration: none;
-    padding: 5px 8px;
-    align-items: flex-start;
+    margin-left: 13px;
+    padding: 1em 6.2em;
+    background: #ffbc00;
+}
+
+#submitButton {
+    margin-left: 0;
+    width: 100%;
+}
+
+#writeReview:hover,
+#submitButton:hover {
+  cursor: pointer;
+  font-size: 103%;
+  background: #ffb200;
+}
+
+/*
+:)
+:D
+;)
+*/
+
+/*LOGIN PAGE*/
+#innerBox {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    cursor: default;
-    color: buttontext;
-    background-color: buttonface;
-    box-sizing: border-box;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-image: initial;
-    -webkit-appearance: button;
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    margin-left: 2em;
-    font-size: 89%;
-}
-
-input {
-	border: 1px solid #3f3f3fe6;
-    padding: 2px
-}
-
-
-#orderInfo {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 90%;
-	margin: auto;
-	margin-top: 3em;
+    justify-content: space-around;
+    margin-top: 5em;
+    padding: 4em;
+    padding-top: 9em;
+    min-height: 800px;
+    color: black;
+    max-width: 1200px;
 
 }
 
-#order-form {
-	width: auto;
+#intro, #buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  padding: 1em;
+  max-height: 400px;
+  justify-content: center;
+
 }
 
-#shippingDiv {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	text-align: left;
+#intro {
+  font-size: 150%;
 }
 
-#order-form input {
-	margin-left: 0px;
-	margin-bottom: 0.8em;
-	padding: 4px 12px;
+#buttons {
+
 }
 
-/* Submit button */
-#submitOrder:hover {
-    cursor: pointer;
+.loginWelcome {
+  font-size: 130%;
+  width: 100%;
+  margin-bottom: -1.8em;
+}
+
+/*LOGIN FORM*/
+
+#loginForm {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginInputs, .regLoginBtn{
+    margin: auto;
+    padding: 1em;
     border: 1px solid black;
+    width: 300px;
+}
+
+.regLoginBtn {
+  box-sizing: content-box;
+  border: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-indent: none;
+}
+
+.regLoginBtn:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.regLoginBtn:hover,
+.regLoginBtn:hover {
+  cursor: pointer;
+  background: #ffa700;
+}
+
+/* REGISTER - PART OF LOGIN PAGE*/
+
+
+/*WRITE A REVIEW*/
+.star {
+  color: red;
+}
+
+#asterixText {
+  margin-top: -1em;
+}
+
+#mainForm {
+    background: white;
+    padding: 2em 5em 1em 5em;
+    padding-top: 2em;
+    margin: 10em 0em;
+}
+
+#reviewForm {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+#rightDiv, #rightSide, #leftDiv {
+    width: 45%;
+    margin: auto;
+}
+
+
+#rightDiv {
+  margin-top: -18px;
+}
+
+#reviewForm input, textarea, select {
+    margin-top: 0.3em;
+    margin-bottom: 2em;
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 0.6em 0;
+    text-indent: 5px;
     font-size: 90%;
 }
 
-
-#confirmation {
-	margin: auto;
-	margin-top: 40px;
-	width: 50%;
-	display: flex;
-	flex-wrap: wrap;
+#reviewHeading, #reviewTextBox {
+    margin-bottom: 1.2em;
 }
 
-#personalDetails {
-	width: 98%;
-	text-align: left;
-}
-
-#highlight {
-	line-height: 1.5;
-	background-color: yellow;
+input:focus, textarea:focus, select:focus {
+  border: 2px solid #ffbc00;
 }
 
 
-#confirmationTable {
-	border: 1px solid gray;
-	border-collapse: collapse;
-	width: 98%;
-	margin: auto;
-	margin-bottom: 2em;
-}
-
-#confirmationTable th, #confirmationTable td {
-	border: 1px solid gray;
-}
-
-hr {
-	display: flex;
+/*DIV*/
+#cityStateZipLabels {
+    display: flex;
     flex-wrap: wrap;
-    height: 8px;
-    border: 0;
-    border-top: 1.3px solid #a7a7a7;
+    width: 100%;
+    text-align: left;
+    justify-content: space-between;
+}
+
+#cityStateZipInputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#stateSelect {
+  color: black;
+  background: white;
+}
+
+#stateSelect:hover {
+  cursor: pointer;
+}
+
+#reviewHeading {
+  width: 99%;
+}
+
+textarea {
+  width: 97%;
+  padding-left: 0.5em;
+  min-height: 5.5em;
+  resize: none; 
+  font-size: 100%!important;
+}
+
+#toiletRatings {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  height: 3.5em;
+}
+
+
+/* STARS CSS */
+.fa-star:hover {
+  cursor: pointer;
+}
+
+#toiletText {
+  width: 74%;
+}
+
+
+#fiveStars {
+  margin-top: 4px;
+}
+
+
+#submitDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+
+/*REVIEWS PAGE*/
+
+
+table {
+  padding: 35px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #cccccc;
+  margin: 10px;
+}
+
+tbody {
+  text-align: left;
+}
+
+
+
+.fullWidth {
+  width: 100%;
+}
+
+.halfWidth {
+  width: 50%;
+}
+
+.thirdWidth {
+  width: calc(100%/3);
+}
+
+.twelveWidth {
+  width: 12%;
+}
+
+.sixteenWidth {
+  width: 16%;
+}
+
+.twentyWidth {
+  width: 20%;
+}
+
+.twentyTwoWidth {
+  width: 22%;
+}
+
+.thirtyWidth {
+  width: 30%;
+}
+
+.fortyWidth {
+  width: 40%;
+}
+
+.fortyFiveWidth {
+  width: 45%;
+}
+
+.marginRightTwo {
+  margin-right: 2%;
+}
+
+.threePad {
+  padding: 3px;
+}
+
+
+
+#reviewsDiv {
+    max-width: 900px;
+  margin: 10em 3em;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.reviewHeading {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.reviewText {
+  font-size: 110%;
+  padding: 10px;
+  padding-left: 0;
+  text-indent: 1em;
+}
+
+.fa-thumbs-up,
+.fa-thumbs-down {
+    font-weight: 200!important;
+    font-size: 156%;
+    padding-left: 0.5em;
+}
+
+.fa-thumbs-up:hover,
+.fa-thumbs-down:hover {
+    cursor: pointer;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.indent {
+    text-indent: 1em;
+}
+
+/* UNDER CONSTRUCTION PAGE*/
+
+#underConstruction {
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content:  center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+#returnHome {
+  color: #1349c8;
+  font-size: 135%;
+  font-weight:  bold;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+#returnHome: hover {
+  cursor:pointer;
+}
+
+#constructionImg {
+    height: auto;
     margin: auto;
-    margin-top: 3em;
-    padding: 0;
-    width: 89%;
+    max-width: 100%;
 }
 
-.leftHeading {
-	text-align: left;
+
+/* MOBILE STYLE TESTING HERE */
+#hamburger {
+    display: none;
+    font-size: 165%;
+    padding-right: 1em;
 }
 
-/*Contact Form */
-
-	.container {
-		width: 85%;
-	}
-
-	#contactForm input[type=text], #contactForm select, #contactForm textarea {
-	  width: 100%;
-	  padding: 12px;
-	  border: 1px solid #ccc;
-	  border-radius: 4px;
-	  box-sizing: border-box;
-	  margin-top: 6px;
-	  margin-bottom: 16px;
-	  resize: vertical;
-	}
-
-	#contactForm {
-		margin: auto;
-		text-align: left;
-	}
-
-	#contactSubmit {
-	  background-color: #223e48;
-	  color: white;
-	  padding: 0.8em 1.6em;
-	  border: none;
-	  border-radius: 4px;
-	  cursor: pointer;
-	  width: auto;
-	  font-size: 100%;
-	}
-
-	#contactSubmit:hover {
-	  background-color: #2c802f;
-	  font-size: 95%;
-	}
-
-	textarea {
-		min-height: 200px;
-		height: auto;
-	}
-	
-	#messageMessage {
-	    display: block;
-	    margin-bottom: 23em;
-	}
-
-/* Any Questions? Contact Us link at bottom of page in index.html*/
-#contactLink {
-    text-decoration: underline;
-    color: #100695;	
+#hamburger:hover {
+  cursor: pointer;
 }
+
+.navLinks {
+  width: 100%;
+  text-align: left;
+  text-indent: 1em;
+}
+
+.bigLinks {
+  width: 15%;
+}
+
+.navLinks:hover,
+.bigLinks:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+

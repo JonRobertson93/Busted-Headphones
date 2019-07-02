@@ -1,127 +1,56 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title> Sell Junk Headphones </title>
-	<link href="style.css" rel="stylesheet">
-	<link href="responsive.css" rel="stylesheet">
-	<!-- NAVBAR.CSS - GOES IN HEAD -->
-    <link href="../navbar.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-</head>
-<body>
-<!-- NAVBAR - FIRST COMPONENT IN BODY -->
-    <nav id="navbar">
-        <h1> Broken Headphones </h1>
-        <a href="../" id="home"> Home </a>
-        <p id="projects"> Projects <i id="downArrow" class="fa fa-caret-down"></i></p>
-        <ul class="dropdown">
-            <li> Animal Clicker </li>
-            <li> Art Portfolio </li>
-            <li> Broken Headphones </li>
-            <li> Concentration Game </li>
-            <li> eBay Calculator </li>
-            <li> Frogger Game </li>
-            <li> HTML Email Blast Ad </li>
-            <li> Responsive News Site </li>
-            <li> Restroom Rater </li>
-            <li> Sample Portfolio Page </li>
-        </ul>
-    </nav>
-	<!-- Main body content -->
-	<!-- Reference - https://www.gadgetsalvation.com/ -->
-	<div id="container">
-		<div class="half-screen">
-			<h2> Turn your broken, used or unwanted headphones in cash! </h2> 
-			<ul>
-				<li> <i class="fas fa-check"></i> Instant online quote </li>
-				<li> <i class="fas fa-check"></i> FREE shipping label </li>
-				<li> <i class="fas fa-check"></i> Secure payment within 24 hours </li>
-			</ul>
-			<div id="get-started">
-			<a href="#submission" id="start-now"> Get Quote </a>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> Restroom Rater </title>
+    <link href="style.css" rel="stylesheet">
+    <link href="responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- FOR SEARCH BAR -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="typeahead.min.js"></script>
+    <!-- EVENTUALLY PUT THIS IN SCRIPT.JS -->
+  </head>
+  <body>
+  	<div id = "container">
+  		<div id="navbar">
+	    	<h1 id = "siteTitle"> <a href="http://brokenheadphones.store" target="_blank" alt="Link to homepage brokenheadphones.store"> <i class="fas fa-star"></i> Restroom <span class="golden"> Rater </span> </a></h1>
+				<p class="bigLinks"> Portfolio Home </p>
+				<p class="bigLinks"> Sign In/Register </p>
+				<i id="hamburger" class="fas fa-bars"></i>
+				<p class="navLinks hidden"> Portfolio Home </p>
+				<p class="navLinks hidden"> Sign In/Register </p>
+	    </div>
+	    <div id="heroImage">
+	    	<div id="allHero">
+		    	<div id="heroText">
+		    		<p id="bannerHeader"> Find clean (or dirty) restrooms with one quick search </p>
+		    	</div>
+		    	<div id = "searchDiv">
+				    <div class="panel panel-default">
+				      <div class="bs-example">
+				          <form class="searchForm" action="php/reviewPage.php" method="POST">
+				            <input type="text" name="typeahead" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Search Restrooms">
+				            <button id = "searchSubmit" type="submit"> <i class="fas fa-search" id="magButton"> </i></button> 
+				          </form>
+				      </div>
+				    </div>
+				</div>
+				<div id = "leaveReview">
+					<a id="writeReview" href="newReview/reviewForm.html"> Leave a Review </a>
+				</div>
 			</div>
-		</div>
-		<!-- <div class="half-screen"> -->
-			<img id="hero-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Headphone_icon.svg/2000px-Headphone_icon.svg.png" alt="placeholder">
-		<!-- </div> -->
-	</div>
+	    </div>
 
-
-	<div id="steps">
-	    <div id="stepsInnerDiv">
-    		<div id="step-one">
-    			<h3 class="steps-heading"> Instant Quote </h3>
-    			<div class="steps-divs">
-    				<p class = "instructions"> Use the tool below to get an instant price quote for your headphones. You can enter as many headphones as you want to sell. When you are ready for your quote, click "Get Quote".
-    				</p>
-    				<i class="fas fa-hand-holding-usd"></i>
-    			</div>
-    		</div>
-    		<div id="step-two">
-    			<h3 class="steps-heading"> Ship </h3>
-    			<div class="steps-divs">
-    				<p class = "instructions"> 
-    					Once you accept your quote, you will receive a confirmation email with your free shipping label within 24 hours. 
-    					All you will need is a printer to print the label and a box or envelope to pack the headphones in. 
-    				</p>
-    				<i class="fas fa-truck"></i>
-    			</div>
-    		</div>
-    		<div id="step-three">
-    			<h3 class="steps-heading"> Get Paid </h3>
-    			<div class="steps-divs">
-    				<p class = "instructions"> Within 24 hours of receiving your package, a payment will be sent via PayPal for your quoted amount. 
-    				</p>
-    				<i class="fab fa-cc-paypal"></i>
-    			</div>
-    		</div>
-    	</div>
-	</div>  
-
-
-	<div id="submission">
-		<form id="submission-form" action="cart.php" method="POST">
-			<h2> Sell Now: </h2>
-			<div class="formDivs">
-				<label class="label" for="brands"> Brand: </label>
-				<select class="brands" name="brand[]">
-					<option></option>
-					<option value="Bose">Bose</option>
-					<option value="Beats">Beats</option>
-					<option value="Sony">Sony</option>
-					<option value="JBL">JBL</option>
-				</select>
-			</div>
-
-			<div class="formDivs">
-				<label class="label" for="models"> Model: </label>
-				<select class="models" name="model[]">
-				</select>
-			</div>
-
-			<div class="formDivs">
-				<label class="label" for="qty"> Quantity: </label>
-				<input type="text" class="qty" name="qty[]">
-			</div>
-			<br />
-			<br />
-			<div class="formButtons">
-				<button type="button" id="addMore"> Add more items</button>
-				<input type="submit" id="quoteButton" value="Get Quote">
-			</div>
-			<div id="contactDiv">
-			    <p> Any Questions? Please feel free to <a href="contact.html" alt="contact link" id="contactLink"> contact us </a></p>
-			</div>
-			<p id = "oops">
-
-			</p>
-		</form>
-		
-	</div>
-
-<script src="app.js"></script>
-</body>
+	    <!-- SEARCH BAR GOING HERE -->
+	    	
+	</div>	<!-- Main container div -->
+    <script src="js/main.js"></script>
+    <script src="js/hamburger.js"></script>
+  </body>
 </html>
